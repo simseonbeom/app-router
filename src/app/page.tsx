@@ -4,7 +4,8 @@ import Image from "next/image";
 
 
 export const metadata:Metadata = {
-  title:'Triangle | Main'
+  title:'Triangle | Main',
+  description: '삼각형 프로젝트 메인 페이지입니다.'
 }
 
 
