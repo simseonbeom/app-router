@@ -1,15 +1,16 @@
 import { Metadata } from "next"
 
 
-export const metadata:Metadata = {
-  title:'Triangle | Login'
-}
 
+
+export const metadata:Metadata = {
+  title:'Triangle | Photos'
+}
 
 
 function Page() {
   return (
-    <div>Login Page</div>
+    <div>Photos Page</div>
   )
 }
 export default Page
