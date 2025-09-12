@@ -2,7 +2,7 @@ import { Photo } from "@/@types/type";
 
 
 async function fetchPhotosByOne(id:string):Promise<Photo | null> {
-  const END_POINT = `https://picsum.photos/id/${id}/info`;
+  const END_POINT = `${process.env.NEXT_PUBLIC_BASE_URL}/id/${id}/info`;
 
   try{
     const res = await fetch(END_POINT);
