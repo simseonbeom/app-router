@@ -35,7 +35,7 @@ export default async function fetchPhotos (
   init:RequestInit
 ):Promise<Photo[]> {
   
-  const END_POINT = 'https://picsum.photos/v2/list?page=5&limit=10'
+  const END_POINT = 'https://picsum.photos/v2/list?page=8&limit=10'
 
   try{
     const res = await fetch(
