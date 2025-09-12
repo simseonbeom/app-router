@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-
+import SmoothScrollerProvider from "@/provider/SmoothScrollerProvider";
+ 
 
 export const metadata: Metadata = {
   title: "Triangle",
@@ -35,16 +36,18 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  
   return (
     <html lang="ko-KR">
-      <body className='antialiased' >
-        <div className="flex flex-col h-screen">
+      <body className='antialiased'>
+        <SmoothScrollerProvider>
           <Header />
           <main className="flex-1">
             {children}
           </main>
           <Footer />
-        </div>
+        </SmoothScrollerProvider>
       </body>
     </html>
   );

@@ -13,6 +13,7 @@ export const metadata:Metadata = {
 
 // 10개의 랜덤 이미지를 가져와 렌더링 
 
+
 export default async function Home() {
 
 
