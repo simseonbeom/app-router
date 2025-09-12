@@ -32,7 +32,7 @@ import { Photo } from "@/@types/type";
 
 
 export default async function fetchPhotos (
-  init:RequestInit
+  init?:RequestInit
 ):Promise<Photo[]> {
   
   const END_POINT = 'https://picsum.photos/v2/list?page=8&limit=10'

@@ -3,6 +3,7 @@ import { Metadata } from "next"
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import { delay } from "@/utils/delay";
 
 
 
@@ -22,6 +23,9 @@ async function Page() {
   // const data = await fetchPhotos({cache:'no-store'});
 
   if(!data) notFound()
+
+
+  await delay()
 
   return (
     <div>

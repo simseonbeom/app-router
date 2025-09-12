@@ -1,5 +1,6 @@
 
 
+import { delay } from "@/utils/delay";
 import fetchPhotosByOne from "@/utils/fetchPhotosByOne";
 import Image from 'next/image'
 import { notFound } from "next/navigation";
@@ -28,6 +29,7 @@ export const dynamicParams = true
 export async function generateMetadata({params}:{params:Promise<{id:string}>}){
   const { id } = await params;
 
+
   return {
     title: `Triangle | Photos-${id}`
   }
@@ -42,6 +44,9 @@ async function Page({params}:{params:Promise<{id:string}>}) {
   const data = await fetchPhotosByOne(id);
   
   if(!data) notFound(); // server component에서만 사용 가능 
+
+  await delay();
+
   
   return (
     <div className="p-6">
